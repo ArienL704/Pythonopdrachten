@@ -3,7 +3,7 @@ import json
 def get_inputs():
     name = input("Naam:")
     d =  {}
-    d['yaar'] = input('yaar:')
+    d['jaar'] = input('jaar:')
     d['auteur'] = input("auteur:")
     return(name,d)
 
