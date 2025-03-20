@@ -1,13 +1,20 @@
 import tkinter as tk
+import json
 
 window = tk.Tk()
 window.title("Hallo")
 
-window.geometry("200x200")
+window.geometry("1000x1000")
 window.minsize(200, 200)
 
-Label_hallo = tk.Label(text="Hello")
-Label_hallo.pack(pady = 20)
+with open("C:\\Users\\neapo\\Documents\\tmp\\Pythonopdrachten\\Python\\Muziek.json", 'r') as f:
+    data = json.load(f)
+    print(data)
+
+o = tk.Label(window, text="tekst")
+o.pack()
+#T = window.Text(window, )
+
     
 
 goodbye = tk.Button(window, text="Goodbye", command=window.destroy)
