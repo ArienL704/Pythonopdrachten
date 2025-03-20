@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter import ttk
 import json
 
 # Create window
@@ -12,10 +13,6 @@ window.minsize(200, 200)
 # JSON file
 with open("C:\\Users\\neapo\\Documents\\tmp\\Pythonopdrachten\\Python\\Muziek.json", 'r') as f:
     data = json.load(f)
-
-# Create a Label to display some initial text
-o = tk.Label(window, text="Here is the content of the JSON file:")
-o.pack()
 
 # display
 text_widget = tk.Text(window, height=20, width=80)
