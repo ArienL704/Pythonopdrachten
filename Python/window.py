@@ -1,22 +1,32 @@
 import tkinter as tk
 import json
 
+# Create window
 window = tk.Tk()
 window.title("Hallo")
 
-window.geometry("1000x1000")
+# window size
+window.geometry("800x400")
 window.minsize(200, 200)
 
+# JSON file
 with open("C:\\Users\\neapo\\Documents\\tmp\\Pythonopdrachten\\Python\\Muziek.json", 'r') as f:
     data = json.load(f)
-    print(data)
 
-o = tk.Label(window, text="tekst")
+# Create a Label to display some initial text
+o = tk.Label(window, text="Here is the content of the JSON file:")
 o.pack()
-#T = window.Text(window, )
 
-    
+# display
+text_widget = tk.Text(window, height=20, width=80)
+text_widget.pack()
 
+text_widget.insert(tk.END, json.dumps(data, indent=4))
+
+# read-only
+text_widget.config(state=tk.DISABLED)
+
+# goodbye
 goodbye = tk.Button(window, text="Goodbye", command=window.destroy)
 goodbye.pack()
 
