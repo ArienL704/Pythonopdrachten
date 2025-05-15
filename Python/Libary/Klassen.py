@@ -35,19 +35,18 @@ canvas = tk.Canvas(root, height=700, width=700)
 
 canvas.pack()
 
-# Lokaal 1
-canvas.create_rectangle(50, 50, 100, 100, fill='blue')
-canvas.create_text(75, 75, text=L1.naam, fill='white')
+# Posities van lokalen op canvas (x1, y1, x2, y2)
+lokalen_pos = {
+    "C1.06": (50, 50, 100, 100),
+    "C1.04": (175, 50, 225, 100),
+    "C1.13": (300, 50, 350, 100),
+}
 
-# Lokaal 2
-canvas.create_rectangle(175, 50, 225, 100, fill='blue')
-canvas.create_text(200, 75, text=L2.naam, fill='white')
-
-# Lokaal 3
-canvas.create_rectangle(300, 50, 350, 100, fill='blue')
-canvas.create_text(325, 75, text=L3.naam, fill='white')
+# Lokalen tekenen
+for naam, (x1, y1, x2, y2) in lokalen_pos.items():
+    canvas.create_rectangle(x1, y1, x2, y2, fill='blue', tags=naam)
+    canvas.create_text((x1 + x2)//2, (y1 + y2)//2, text=naam, fill='white')
 
 canvas.create_line(50, 120, 350, 120, fill='red', width=1)
-
 
 root.mainloop()
