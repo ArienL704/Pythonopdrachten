@@ -66,6 +66,7 @@ def on_click(event):
                 selected = []
             break
 
+#Lines
 def teken_verticale_lijn(lokaal_naam):
     x1, y1, x2, y2 = lokalen_pos[lokaal_naam]
     x_midden = (x1 + x2) // 2
@@ -79,7 +80,6 @@ def teken_horizontale_route(lokaal1, lokaal2):
     x3, _, x4, _ = lokalen_pos[lokaal2]
     x_end = (x3 + x4) // 2
 
-    # Line
     canvas.create_line(x_start, gang_y, x_end, gang_y, fill='green', width=2)
 
 # Click

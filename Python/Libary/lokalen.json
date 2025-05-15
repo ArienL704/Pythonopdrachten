@@ -1,14 +1,32 @@
 [
   {
     "naam": "C1.06",
-    "richting": "West"
+    "richting": "West",
+    "coords": [
+      50,
+      50,
+      100,
+      100
+    ]
   },
   {
     "naam": "C1.04",
-    "richting": "West"
+    "richting": "West",
+    "coords": [
+      175,
+      50,
+      225,
+      100
+    ]
   },
   {
     "naam": "C1.13",
-    "richting": "West"
+    "richting": "West",
+    "coords": [
+      300,
+      50,
+      350,
+      100
+    ]
   }
 ]
